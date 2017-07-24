@@ -1,0 +1,73 @@
+jQuery(function($) {
+  var locations = {
+    'Batch Mode': ['Start',
+      'Stop'
+    ],
+    'Change': ['Account Merges',
+      'Cutoff Hours',
+      'Configuration (other)',
+      'Database Value (other)',
+      'Locations',
+      'Install Wedge Report',
+      'Product (Insert or Edit) ',
+      'ReOpen Host Account',
+      'Remove Transaction History',
+      'UI - Text',
+      'UI - CDN',
+      'Undelete User',
+      'Third Party Data - Delete/Update ',
+    ],
+    'Data Services': ['Batch Review',
+      'FTP Issue Resolved',
+      'Manual History Insert/Removal',
+      'Modify Batch Import/Processing',
+      'Pick Up Batch Files',
+      'Provide Status of Batch',
+      'Sent File to 3rd Party/Customer',
+      'Updated Task',
+      'Updated/Upgraded Archive Utility Product (Insert or Edit)'
+    ],
+    'External Resolution': ['Customer',
+      'Other Q2 Department',
+      'Third Party',
+    ],
+    'Investigate': ['Audit',
+      'Attach to JIRA',
+      'Logs'
+    ],
+    'Provided': ['Create Report',
+      'Provide Information'
+    ],
+    'Restart': ['Bridge',
+      'HQ/Hydra',
+      'Online',
+      'Scheduler',
+      'Task',
+      'Voice Application',
+      'VPN',
+      'Wedge'
+    ],
+    'Transactions': ['Cancel',
+      'Enable',
+      'Cancel/Enable',
+      'Reset Batch'
+    ],
+    'Upgrade': ['Bug Fix',
+      'Product Enhancement'
+    ],
+    'Closed as Duplicate': [],
+    'No Response from Customer': [],
+    'Other (please specify)': [],
+  }
+
+  var $locations = $('#location');
+  $('#country').change(function() {
+    var country = $(this).val(),
+      lcns = locations[country] || [];
+
+    var html = $.map(lcns, function(lcn) {
+      return '<option value="' + lcn + '">' + lcn + '</option>'
+    }).join('');
+    $locations.html(html)
+  });
+});

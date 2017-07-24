@@ -5,7 +5,7 @@
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <label class="page1">Case Action</label>
-<div class="tooltips" title="Please select the country that the customer will primarily be served from">
+<div class="tooltips" title="Please select the Case Action taken">
   <select id="country" name="country" placeholder="Phantasyland">
     <option>Select a Case Action</option>
     <option>Batch Mode</option>

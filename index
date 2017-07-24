@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <label class="page1">Case Action</label>
 <div class="tooltips" title="Please select the country that the customer will primarily be served from">
   <select id="country" name="country" placeholder="Phantasyland">
@@ -22,3 +28,7 @@
 <div class="tooltips" title="Please select the city that the customer is primarily to be served from.">
   <select id="location" name="location" placeholder="Anycity"></select>
 </div>
+
+</body>
+</html>
+

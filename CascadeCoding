@@ -223,7 +223,7 @@ select { width:150px; }
 <br>
   
   
-<select>
+
 <div id="wrap">
   <form name="myForm" action method="post">
     <select name="categories" onchange="updateModels(this.form)">

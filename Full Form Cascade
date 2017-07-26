@@ -16,70 +16,124 @@
 
 
 <div id="wrap">
-  <form name="myForm" action method="post">
-    <select name="categoriesProd" onchange="updateModels(this.form)">
-    <option>Please select</option>
-    <option>Central</option>
-    <option>Mobile</option>
-    <option>Monitoring</option>
-    <option>Online_Banking</option>
-    <option>Q2_Products</option>
-    <option>Supporting_Services</option>
-    <option>Vendor_-_Third_Party</option>
-    <option>All_Channels_Affected</option>
-	<option>Other_(please_specify)</option>
-    </select>
-<br>
-<br>
-    <heading>PRODUCT DETAILS</heading>
-	<br>
-<br>
-	<select name="prod"></select>
-  </form>
-</div>
-
-
-
-
-<script type="text/javascript">
-var prod = [];
-prod.Central = ["Administration","Secure Messaging",
-"Reports"];
-prod.Mobile = ["Android","iOS","Both"];
-prod.Monitoring = ["Alerts Investigation","Outage","App Dynamics","JAMS"];
-prod.Online_Banking = ["Account History ","Account List","ACH","Funds Transfer","User Interface","Wedge/Forms","Wires"];
-prod.Q2_Products = ["Corporate Banking","Customer Portal","Q2 Assist","Q2 Patrol","Q2 Sentinel","Q2 Smart","Test Environment","Text Banking","Voice Banking"];
-prod.Supporting_Services = ["Batch Import","Notifications","TAC","Custom Reports"];
-prod.Vendor_-_Third_Party = ["Bill Pay","MRDC","PFM","E-Statements/Check Images"];
-prod.All_Channels_Affected = [];
-prod.Other_(please_specify) = [];
-
-
-
-// ---
-function updateModels(theForm) 
- { if(theForm.categoriesProd.selectedIndex<1){return false; }
-   var opProd=theForm.categoriesProd.options;
-   var newModels = prod[opProd[opProd.selectedIndex].value];
-   theForm.prod.options.length = 0;
-   theForm.prod.options[0] = new Option("Please select", "");
-   theForm.prod.options[0].selected = true;
-   for (var i=0; i<newModels.length; i++) 
-   { theForm.prod.options[i+1] = new Option(newModels[i], newModels[i]); }  
- }
-// ---
-// check both selections have been made
- document.getElementById("B1").onclick=function(event)
-  { event=event || window.event;
-    var targElem1 = event.target || event.srcElement;
-    var thisForm1=targElem.parentNode;
-    if(thisForm1.prod.selectedIndex>0 && thisForm.prod.selectedIndex>0)
-      { var prodP=thisForm.prod;
-        location.href= prodP[prodP.selectedIndex].value+".htm"; }
-    else { return false; } 
+   <select id='countries' onchange='countryChanged(this.value);'>
+    <option value=''>Please select</option>
+    <option value='Central'>Central</option>
+    <option value='Mobile'>Mobile</option>
+    <option value='Monitoring'>Monitoring</option>
+	<option value='OnlineBanking'>Online Banking</option>
+	<option value='Q2Products'>Q2 Products</option>
+	<option value='SupportingServices'>Supporting Services</option>
+	<option value='VendorThirdParty'>Vendor - ThirdParty</option>
+	<option value='AllChannelsAffected'>All ChannelsAffected</option>
+	<option value='OtherPleaseSpecify'>Other (please specify</option>
+  </select>
+  &nbsp;&nbsp;
+  <br>
+  <br>
+  <heading>PRODUCT DETAILS</heading>
+    <br>
+  <br>
+  <select id='states' onchange='stateChanged(this.value);'>
+    <option value=''>Please select</option>
+  </select>
+  &nbsp;&nbsp; 
+  
+  
+ <script type="text/javascript">  
+   var statesCentral=["Administration","Secure Messaging","Reports"];
+   var statesMobile=["Android",
+"iOS",
+"Both"];
+   var statesMonitoring=["Alerts Investigation",
+"Outage",
+"App Dynamics",
+"JAMS"];
+   var statesOnlineBanking=["Account History ",
+"Account List",
+"ACH",
+"Funds Transfer",
+"User Interface",
+"Wedge/Forms",
+"Wires"];
+   var statesQ2Products=["Corporate Banking",
+"Customer Portal",
+"Q2 Assist",
+"Q2 Patrol",
+"Q2 Sentinel",
+"Q2 Smart",
+"Test Environment",
+"Text Banking",
+"Voice Banking"];
+   var statesSupportingServices=["Batch Import",
+"Notifications",
+"TAC",
+"Custom Reports"];
+   var statesVendorThirdParty=["Bill Pay",
+"MRDC",
+"PFM",
+"E-Statements/Check Images"];
+   var statesAllChannelsAffected=["Please select"];
+   var statesOtherPleaseSpecify=["Please select"];
+   
+   function countryChanged(country)
+   {  
+      var selectState = document.getElementById('states');
+      var ln = selectState.length - 1;
+      while (ln > 0)
+      { 
+        selectState.remove(1);  //Remove all but "Select State"
+        ln--;
+      }
+      
+      
+      var stateArray;
+      
+      switch(country)
+      {
+        case "Central":
+            stateArray=statesCentral
+            break;
+        case "Mobile":
+            stateArray=statesMobile
+            break;
+        case "Monitoring":
+            stateArray=statesMonitoring
+            break;
+		case "Online Banking":
+            stateArray=statesOnlineBanking
+            break;
+		case "Q2Products":
+            stateArray=statesQ2Products
+            break;
+		case "SupportingServices":
+            stateArray=statesSupportingServices
+            break;
+		case "VendorThirdParty":
+            stateArray=statesVendorThirdParty
+            break;
+		case "AllChannelsAffected":
+            stateArray=statesAllChannelsAffected
+            break;
+		case "OtherPleaseSpecify":
+            stateArray=statesOtherPleaseSpecify
+            break;
+        default:
+      }      
+          
+      for (i = 0; i < stateArray.length; i++)
+      {
+        var option = document.createElement('option'); 
+        option.text = stateArray[i];
+        option.value = stateArray[i];
+        selectState.add(option);
+      }      
   }
-//
-</script>
+  
+  
+     
+  
+  </script>
 
 
 
@@ -147,8 +201,9 @@ function updateModels(theForm)
 <br>
 <br>
 <heading>7/6/2017 11:26 AM</heading>
+<br>
 
-
+<br>
 </td>
 
 <td>
@@ -265,6 +320,7 @@ items.Upgrade = ["Bug Fix","Product Enhancement"];
 items.Closed_as_Duplicate = [];
 items.No_Response_from_Customer = [];
 items.Other_(please_specify) = [];
+
 
 
 // ---

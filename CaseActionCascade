@@ -50,6 +50,7 @@ items.Investigate = ["Audit","Attach to JIRA","Logs"];
 items.Provided = [" Report","Information","Training"];
 items.Restart = ["Bridge","HQ/Hydra","Online","Task","Task Scheduler","Voice Application","VPN","Wedge"];
 items.Transactions = ["Cancel","Enable","Cancel/Enable","Reset Batch"];
+items.Upgrade = ["Bug Fix","Product Enhancement"
 items.Closed_as_Duplicate = [];
 items.No_Response_from_Customer = [];
 items.Other_(please_specify) = [];

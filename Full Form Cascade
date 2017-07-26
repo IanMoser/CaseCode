@@ -31,7 +31,9 @@
     </select>
 <br>
 <br>
-
+    <heading>PRODUCT DETAILS</heading>
+	<br>
+<br>
 	<select name="prod"></select>
   </form>
 </div>
@@ -145,10 +147,8 @@ function updateModels(theForm)
 <br>
 <br>
 <heading>7/6/2017 11:26 AM</heading>
-<br>
-<br>
-<br>
-<br>
+
+
 </td>
 
 <td>
@@ -242,6 +242,9 @@ function updateModels(theForm)
     </select> 
 	<br>
 <br>
+  <heading>CASE ACTION DETAILS</heading>
+	<br>
+<br>
 <select name="items"></select>
   </form>
 </div>
@@ -320,10 +323,8 @@ function updateModels(theForm)
 <input type="textbox" name="solution" style="font-size: 8pt; height: 160px; width:280px; word-break: break-all; vertical-align: text-top;"/>
 
 
-<br>
-<br>
-<br>
-<br>
+
+
 </td>  
   
  

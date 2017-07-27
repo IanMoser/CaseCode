@@ -24,8 +24,8 @@
 	<option value='OnlineBanking'>Online Banking</option>
 	<option value='Q2Products'>Q2 Products</option>
 	<option value='SupportingServices'>Supporting Services</option>
-	<option value='VendorThirdParty'>Vendor - ThirdParty</option>
-	<option value='AllChannelsAffected'>All ChannelsAffected</option>
+	<option value='VendorThirdParty'>Vendor - Third Party</option>
+	<option value='AllChannelsAffected'>All Channels Affected</option>
 	<option value='OtherPleaseSpecify'>Other (please specify</option>
   </select>
   &nbsp;&nbsp;
@@ -100,7 +100,7 @@
         case "Monitoring":
             stateArray=statesMonitoring
             break;
-		case "Online Banking":
+		case "OnlineBanking":
             stateArray=statesOnlineBanking
             break;
 		case "Q2Products":
@@ -163,29 +163,29 @@
 <br>
 <br>
 <select>
-<option>Archiver</option>
-<option>Batch Import</option>
-<option>Bridge</option>
-<option>CDN</option>
-<option>Configuration Error</option>
-<option>Container</option>
-<option>CORE</option>
-<option>HQ</option>  
-<option>IIS App Pool</option>
-<option>Known Bug</option>
-<option>Maintenance</option>
-<option>Mobile OS Update/Issue</option>
-<option>Network</option>
-<option>Scheduler</option>
-<option>Server Malfunction</option>
-<option>SSO / Third Party</option>
-<option>Unknown</option>
-<option>Upgrade</option>
-<option>User Error</option>
-<option>User Request/Configuration Change</option>
-<option>Voice Application</option>
-<option>Wedge</option>
-<option>Other (please specify)</option>
+<option value="saab">Archiver</option>
+<option value="saab">Batch Import</option>
+<option value="saab">Bridge</option>
+<option value="saab">CDN</option>
+<option value="saab">Configuration Error</option>
+<option value="saab">Container</option>
+<option value="saab">CORE</option>
+<option value="saab">HQ</option>  
+<option value="saab">IIS App Pool</option>
+<option value="saab">Known Bug</option>
+<option value="saab">Maintenance</option>
+<option value="saab">Mobile OS Update/Issue</option>
+<option value="saab">Network</option>
+<option value="saab">Scheduler</option>
+<option value="saab">Server Malfunction</option>
+<option value="saab">SSO / Third Party</option>
+<option value="saab">Unknown</option>
+<option value="saab">Upgrade</option>
+<option value="saab">User Error</option>
+<option value="saab">User Request/Configuration Change</option>
+<option value="saab">Voice Application</option>
+<option value="saab">Wedge</option>
+<option value="saab">Other (please specify)</option>
 </select>
 <br>
 <br>
@@ -283,29 +283,28 @@
     <select name="categories" onchange="updateModels(this.form)">
     <option>Please select</option>
     <option value = "Batch_Mode">Batch Mode</option>
-    <option value = "Change">Change</option>
-    <option value = "External_Resolution">External Resolution</option>
+    <option value = "Change" >Change</option>
+    <option value = "External_Resolution" >External Resolution</option>
     <option value = "Investigate">Investigate</option>
     <option value = "Provided">Provided</option>
     <option value = "Restart">Restart</option>
-    <option value = "Transactions" >Transactions</option>
-    <option value = "Upgrades">Upgrade</option>
-    <option value = "Data_Services">Data Services</option>
-    <option value = "Closed_as_Duplicate">Closed as Duplicate</option>
-    <option value = "No_Response_from_Customer">No Response from Customer</option>
-    <option value = "Other_(please_specify)>Other (please specify)</option>
+    <option value = "Transactions">Transactions</option>
+    <option value = "Upgrade">Upgrade</option>
+	<option value = "Data_Services">Data Services</option>
+	<option value = "Closed_as_Duplicate">Closed as Duplicate</option>
+	<option value = "No_Response_from_Customer">No Response from Customer</option>
+	<optionvalue = "Other_(please_specify)">Other (please specify)</option>
     </select> 
 	<br>
-        <br>
- 
-
+<br>
+  <heading>CASE ACTION DETAILS</heading>
+	<br>
+<br>
+<select name="items"></select>
   </form>
 </div>
 
- <heading>CASE ACTION DETAILS</heading>
-	<br>
-        <br>
-<select name="items"></select>
+
 
 <script type="text/javascript">
 var items = [];
@@ -348,16 +347,16 @@ function updateModels(theForm)
   }
 //
 </script>
+
+<br>
+<br>
+
 <heading>CASE ACTION OTHER</heading>
 <br>
 <br>
 <input type="textbox" name="CAother"/>
 <br>
 <br>
-<br>
-<br>
-
-
 
 
 
@@ -365,9 +364,9 @@ function updateModels(theForm)
 <br>
 <br>
 <select>
-<option>- </option>
-<option>Yes </option>
-<option>No</option>
+<option value="saab">- </option>
+<option value="saab">Yes </option>
+<option value="saab">No</option>
 </select>
 <br>
 <br>
@@ -378,6 +377,7 @@ function updateModels(theForm)
 <br>
 <br>
 <input type="textbox" name="solution" style="font-size: 8pt; height: 160px; width:280px; word-break: break-all; vertical-align: text-top;"/>
+
 
 
 
@@ -394,4 +394,3 @@ function updateModels(theForm)
 </body>
 
 </html>
- 

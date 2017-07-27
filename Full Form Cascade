@@ -163,29 +163,29 @@
 <br>
 <br>
 <select>
-<option value="saab">Archiver</option>
-<option value="saab">Batch Import</option>
-<option value="saab">Bridge</option>
-<option value="saab">CDN</option>
-<option value="saab">Configuration Error</option>
-<option value="saab">Container</option>
-<option value="saab">CORE</option>
-<option value="saab">HQ</option>  
-<option value="saab">IIS App Pool</option>
-<option value="saab">Known Bug</option>
-<option value="saab">Maintenance</option>
-<option value="saab">Mobile OS Update/Issue</option>
-<option value="saab">Network</option>
-<option value="saab">Scheduler</option>
-<option value="saab">Server Malfunction</option>
-<option value="saab">SSO / Third Party</option>
-<option value="saab">Unknown</option>
-<option value="saab">Upgrade</option>
-<option value="saab">User Error</option>
-<option value="saab">User Request/Configuration Change</option>
-<option value="saab">Voice Application</option>
-<option value="saab">Wedge</option>
-<option value="saab">Other (please specify)</option>
+<option>Archiver</option>
+<option>Batch Import</option>
+<option>Bridge</option>
+<option>CDN</option>
+<option>Configuration Error</option>
+<option>Container</option>
+<option>CORE</option>
+<option>HQ</option>  
+<option>IIS App Pool</option>
+<option>Known Bug</option>
+<option>Maintenance</option>
+<option>Mobile OS Update/Issue</option>
+<option>Network</option>
+<option>Scheduler</option>
+<option>Server Malfunction</option>
+<option>SSO / Third Party</option>
+<option>Unknown</option>
+<option>Upgrade</option>
+<option>User Error</option>
+<option>User Request/Configuration Change</option>
+<option>Voice Application</option>
+<option>Wedge</option>
+<option>Other (please specify)</option>
 </select>
 <br>
 <br>
@@ -282,18 +282,18 @@
   <form name="myForm" action method="post">
     <select name="categories" onchange="updateModels(this.form)">
     <option>Please select</option>
-    <option>Batch_Mode</option>
-    <option>Change</option>
-    <option>External_Resolution</option>
-    <option>Investigate</option>
-    <option>Provided</option>
-    <option>Restart</option>
-    <option>Transactions</option>
-    <option>Upgrade</option>
-	<option>Data_Services</option>
-	<option>Closed_as_Duplicate</option>
-	<option>No_Response_from_Customer</option>
-	<option>Other_(please_specify)</option>
+    <option value = "Batch_Mode">Batch Mode</option>
+    <option value = "Change">Change</option>
+    <option value = "External_Resolution">External Resolution</option>
+    <option value = "Investigate">Investigate</option>
+    <option value = "Provided">Provided</option>
+    <option value = "Restart">Restart</option>
+    <option value = "Transactions" >Transactions</option>
+    <option value = "Upgrades">Upgrade</option>
+    <option value = "Data_Services">Data Services</option>
+    <option value = "Closed_as_Duplicate">Closed as Duplicate</option>
+    <option value = "No_Response_from_Customer">No Response from Customer</option>
+    <option value = "Other_(please_specify)>Other (please specify)</option>
     </select> 
 	<br>
 <br>

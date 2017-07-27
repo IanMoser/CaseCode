@@ -296,10 +296,10 @@
     <option value = "Other_(please_specify)>Other (please specify)</option>
     </select> 
 	<br>
-<br>
+        <br>
   <heading>CASE ACTION DETAILS</heading>
 	<br>
-<br>
+        <br>
 <select name="items"></select>
   </form>
 </div>

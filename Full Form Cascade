@@ -348,16 +348,16 @@ function updateModels(theForm)
   }
 //
 </script>
-
-<br>
-<br>
-
 <heading>CASE ACTION OTHER</heading>
 <br>
 <br>
 <input type="textbox" name="CAother"/>
 <br>
 <br>
+<br>
+<br>
+
+
 
 
 
@@ -365,9 +365,9 @@ function updateModels(theForm)
 <br>
 <br>
 <select>
-<option value="saab">- </option>
-<option value="saab">Yes </option>
-<option value="saab">No</option>
+<option>- </option>
+<option>Yes </option>
+<option>No</option>
 </select>
 <br>
 <br>

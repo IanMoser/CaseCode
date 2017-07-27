@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Form Submit</title>
+</head>
+
+<body>
+
+<div id="wrap">
+<heading>PRODUCT</heading>
+<br><br>
+  <form name="myForm" action method="post">
+    <select name="categories" onchange="updateModels(this.form)">
+     <option>Please select</option>
+    <option>Central</option>
+    <option>Mobile</option>
+    <option>Monitoring</option>
+    <option>Online_Banking</option>
+    <option>Q2_Products</option>
+    <option>Supporting_Services</option>
+    <option>Vendor_Third_Party</option>
+    <option>All_Channels_Affected</option>
+	<option>Other_(please_specify)</option>
+    </select><br><br>
+<heading>PRODUCT DETAILS</heading>
+    <br><br>
+	<select name="items"></select>
+    <!-- <input id="B1" type="button" onclick="checkIt(this.form)" value="Submit"> -->
+    <br><br><br><br><input id="B1" type="button" value="Submit">
+  </form>
+</div>
+<!-- end wrap -->
+<script type="text/javascript">
+var items = [];
+items.Central = ["Administration","Secure Messaging","Reports"];
+items.Mobile = ["Android","iOS","Both"];
+items.Monitoring = ["Alerts Investigation","Outage","App Dynamics","JAMS"];
+items.Data_Services = Monitoring = ["Alerts Investigation","Outage","App Dynamics","JAMS"];
+items.Online_Banking = ["Account History ","Account List","ACH","Funds Transfer","User Interface","Wedge/Forms","Wires"];
+items.Q2_Products = ["Corporate Banking","Customer Portal","Q2 Assist","Q2 Patrol","Q2 Sentinel","Q2 Smart","Test Environment","Text Banking","Voice Banking"];
+items.Supporting_Services = ["Batch Import","Notifications","TAC","Custom Reports"];
+items.Vendor_Third_Party = ["Bill Pay","MRDC","PFM","E-Statements/Check Images"];
+items.All_Channels_Affected = [];
+items.Other_(please_specify) = [];
+
+
+
+// ---
+function updateModels(theForm) 
+ { if(theForm.categories.selectedIndex<1){return false; }
+   var op=theForm.categories.options;
+   var newModels = items[op[op.selectedIndex].value];
+   theForm.items.options.length = 0;
+   theForm.items.options[0] = new Option("Please select", "");
+   theForm.items.options[0].selected = true;
+   for (var i=0; i<newModels.length; i++) 
+   { theForm.items.options[i+1] = new Option(newModels[i], newModels[i]); }  
+ }
+// ---
+// check both selections have been made
+ document.getElementById("B1").onclick=function(event)
+  { event=event || window.event;
+    var targElem = event.target || event.srcElement;
+    var thisForm=targElem.parentNode;
+    if(thisForm.categories.selectedIndex>0 && thisForm.items.selectedIndex>0)
+      { var itemsP=thisForm.items;
+        location.href= itemsP[itemsP.selectedIndex].value+".htm"; }
+    else { return false; } 
+  }
+//
+</script>
+
+</body>
+
+</html>

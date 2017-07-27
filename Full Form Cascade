@@ -297,14 +297,15 @@
     </select> 
 	<br>
         <br>
-  <heading>CASE ACTION DETAILS</heading>
-	<br>
-        <br>
-<select name="items"></select>
+ 
+
   </form>
 </div>
 
-
+ <heading>CASE ACTION DETAILS</heading>
+	<br>
+        <br>
+<select name="items"></select>
 
 <script type="text/javascript">
 var items = [];

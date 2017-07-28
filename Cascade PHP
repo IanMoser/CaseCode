@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Form Submit</title>
+</head>
+
+<body>
+
+<table>
+<tr>
+<td><heading>PRODUCT</heading>
+<br>
+<br>
+
+
+
+<div id="wrap">
+   <select id='countries' onchange='countryChanged(this.value);'>
+    <option value=''>Please select</option>
+    <option value='Central'>Central</option>
+    <option value='Mobile'>Mobile</option>
+    <option value='Monitoring'>Monitoring</option>
+	<option value='OnlineBanking'>Online Banking</option>
+	<option value='Q2Products'>Q2 Products</option>
+	<option value='SupportingServices'>Supporting Services</option>
+	<option value='VendorThirdParty'>Vendor - Third Party</option>
+	<option value='AllChannelsAffected'>All Channels Affected</option>
+	<option value='OtherPleaseSpecify'>Other (please specify</option>
+  </select>
+  &nbsp;&nbsp;
+  <br>
+  <br>
+  <heading>PRODUCT DETAILS</heading>
+    <br>
+  <br>
+  <select id='states' onchange='stateChanged(this.value);'>
+    <option value=''>Please select</option>
+  </select>
+  &nbsp;&nbsp; 
+  
+  
+ <script type="text/javascript">  
+   var statesCentral=["Administration","Secure Messaging","Reports"];
+   var statesMobile=["Android",
+"iOS",
+"Both"];
+   var statesMonitoring=["Alerts Investigation",
+"Outage",
+"App Dynamics",
+"JAMS"];
+   var statesOnlineBanking=["Account History ",
+"Account List",
+"ACH",
+"Funds Transfer",
+"User Interface",
+"Wedge/Forms",
+"Wires"];
+   var statesQ2Products=["Corporate Banking",
+"Customer Portal",
+"Q2 Assist",
+"Q2 Patrol",
+"Q2 Sentinel",
+"Q2 Smart",
+"Test Environment",
+"Text Banking",
+"Voice Banking"];
+   var statesSupportingServices=["Batch Import",
+"Notifications",
+"TAC",
+"Custom Reports"];
+   var statesVendorThirdParty=["Bill Pay",
+"MRDC",
+"PFM",
+"E-Statements/Check Images"];
+   var statesAllChannelsAffected=["Please select"];
+   var statesOtherPleaseSpecify=["Please select"];
+   
+   function countryChanged(country)
+   {  
+      var selectState = document.getElementById('states');
+      var ln = selectState.length - 1;
+      while (ln > 0)
+      { 
+        selectState.remove(1);  //Remove all but "Select State"
+        ln--;
+      }
+      
+      
+      var stateArray;
+      
+      switch(country)
+      {
+        case "Central":
+            stateArray=statesCentral
+            break;
+        case "Mobile":
+            stateArray=statesMobile
+            break;
+        case "Monitoring":
+            stateArray=statesMonitoring
+            break;
+		case "OnlineBanking":
+            stateArray=statesOnlineBanking
+            break;
+		case "Q2Products":
+            stateArray=statesQ2Products
+            break;
+		case "SupportingServices":
+            stateArray=statesSupportingServices
+            break;
+		case "VendorThirdParty":
+            stateArray=statesVendorThirdParty
+            break;
+		case "AllChannelsAffected":
+            stateArray=statesAllChannelsAffected
+            break;
+		case "OtherPleaseSpecify":
+            stateArray=statesOtherPleaseSpecify
+            break;
+        default:
+      }      
+          
+      for (i = 0; i < stateArray.length; i++)
+      {
+        var option = document.createElement('option'); 
+        option.text = stateArray[i];
+        option.value = stateArray[i];
+        selectState.add(option);
+      }      
+  }
+  
+  
+     
+  
+  </script>
+
+
+
+<br>
+<br>
+<heading>PRODUCT OTHER</heading>
+<br>
+<br>
+<input type="textbox" name="PRother"/>
+<br>
+<br>
+
+<heading>CALL TYPE</heading>
+<br>
+<br>
+<select>
+<option value="saab">Incident </option>
+<option value="saab">Pro-Active </option>
+<option value="saab">Request</option>
+</select>
+<br>
+<br>
+
+
+
+<heading>SOURCE</heading>
+<br>
+<br>
+<select>
+<option value="saab">Archiver</option>
+<option value="saab">Batch Import</option>
+<option value="saab">Bridge</option>
+<option value="saab">CDN</option>
+<option value="saab">Configuration Error</option>
+<option value="saab">Container</option>
+<option value="saab">CORE</option>
+<option value="saab">HQ</option>  
+<option value="saab">IIS App Pool</option>
+<option value="saab">Known Bug</option>
+<option value="saab">Maintenance</option>
+<option value="saab">Mobile OS Update/Issue</option>
+<option value="saab">Network</option>
+<option value="saab">Scheduler</option>
+<option value="saab">Server Malfunction</option>
+<option value="saab">SSO / Third Party</option>
+<option value="saab">Unknown</option>
+<option value="saab">Upgrade</option>
+<option value="saab">User Error</option>
+<option value="saab">User Request/Configuration Change</option>
+<option value="saab">Voice Application</option>
+<option value="saab">Wedge</option>
+<option value="saab">Other (please specify)</option>
+</select>
+<br>
+<br>
+<heading>SOURCE OTHER</heading>
+<br>
+<br>
+<input type="textbox" name="SOother"/>
+<br>
+<br>
+
+
+<heading>CUSTOMER APPROVAL DEADLINE</heading>
+<br>
+<br>
+<heading>7/6/2017 11:26 AM</heading>
+<br>
+
+<br>
+</td>
+
+<td>
+<br>
+<br>
+</td>
+
+<td>
+<br>
+<br>
+</td>
+
+<td>
+<br>
+<br>
+</td>
+
+<td>
+<br>
+<br>
+</td>
+
+<td>
+<br>
+<br>
+</td>
+
+<td>
+<br>
+<br>
+</td>
+
+<td>
+<br>
+<br>
+</td>
+
+<td>
+<br>
+<br>
+</td>
+
+<td>
+<br>
+<br>
+</td>
+
+<td>
+<br>
+<br>
+</td>
+
+<td>
+<br>
+<br>
+</td>
+
+<td>
+<br>
+<br>
+</td>
+
+<td>
+<br>
+<br>
+</td>
+
+<td>
+<heading>CASE ACTION</heading>
+<br>
+<br>
+  
+  
+
+<div id="wrap">
+  <form name="myForm" action method="post">
+    <select name="categories" onchange="updateModels(this.form)">
+    <option>Please select</option>
+    <option value = "Batch_Mode">Batch Mode</option>
+    <option value = "Change" >Change</option>
+    <option value = "External_Resolution" >External Resolution</option>
+    <option value = "Investigate">Investigate</option>
+    <option value = "Provided">Provided</option>
+    <option value = "Restart">Restart</option>
+    <option value = "Transactions">Transactions</option>
+    <option value = "Upgrade">Upgrade</option>
+	<option value = "Data_Services">Data Services</option>
+	<option value = "Closed_as_Duplicate">Closed as Duplicate</option>
+	<option value = "No_Response_from_Customer">No Response from Customer</option>
+	<optionvalue = "Other_(please_specify)">Other (please specify)</option>
+    </select> 
+	<br>
+<br>
+  <heading>CASE ACTION DETAILS</heading>
+	<br>
+<br>
+<select name="items"></select>
+  </form>
+</div>
+
+
+
+<script type="text/javascript">
+var items = [];
+items.Batch_Mode = ["Start","Stop"];
+items.Change = ["Account Merges","Cutoff Hours","Configuration (other)","Container Build","Database Value (other)","Locations","Install Wedge Report","Product (Insert or Edit) ","ReOpen Host Account","Remove Transaction History","UI - Text","UI - CDN","Undelete User","Third Party Data - Delete/Update "];
+items.Data_Services = ["Batch Review","FTP Issue Resolved","Manual History Insert/Removal","Modify Batch Import/Processing","Pick Up Batch Files","Provide Status of Batch","Sent File to 3rd Party/Customer","Updated Task","Updated/Upgraded Archive Utility "];
+items.External_Resolution = ["Customer","Other Q2 Department","Third Party"];
+items.Investigate = ["Audit","Attach to JIRA","Logs"];
+items.Provided = [" Report","Information","Training"];
+items.Restart = ["Bridge","HQ/Hydra","Online","Task","Task Scheduler","Voice Application","VPN","Wedge"];
+items.Transactions = ["Cancel","Enable","Cancel/Enable","Reset Batch"];
+items.Upgrade = ["Bug Fix","Product Enhancement"];
+items.Closed_as_Duplicate = [];
+items.No_Response_from_Customer = [];
+items.Other_(please_specify) = [];
+// ---
+function updateModels(theForm) 
+ { if(theForm.categories.selectedIndex<1){return false; }
+   var op=theForm.categories.options;
+   var newModels = items[op[op.selectedIndex].value];
+   theForm.items.options.length = 0;
+   theForm.items.options[0] = new Option("Please select", "");
+   theForm.items.options[0].selected = true;
+   for (var i=0; i<newModels.length; i++) 
+   { theForm.items.options[i+1] = new Option(newModels[i], newModels[i]); }  
+ }
+// ---
+// check both selections have been made
+ document.getElementById("B1").onclick=function(event)
+  { event=event || window.event;
+    var targElem = event.target || event.srcElement;
+    var thisForm=targElem.parentNode;
+    if(thisForm.categories.selectedIndex>0 && thisForm.items.selectedIndex>0)
+      { var itemsP=thisForm.items;
+        location.href= itemsP[itemsP.selectedIndex].value+".htm"; }
+    else { return false; } 
+  }
+//
+</script>
+
+<br>
+<br>
+
+<heading>CASE ACTION OTHER</heading>
+<br>
+<br>
+<input type="textbox" name="CAother"/>
+<br>
+<br>
+
+
+
+<heading>CHANGES MADE IN PRODUCTION</heading>
+<br>
+<br>
+<select>
+<option value="saab">- </option>
+<option value="saab">Yes </option>
+<option value="saab">No</option>
+</select>
+<br>
+<br>
+
+
+
+<heading>CASE SOLUTION</heading>
+<br>
+<br>
+<input type="textbox" name="solution" style="font-size: 8pt; height: 160px; width:280px; word-break: break-all; vertical-align: text-top;"/>
+
+
+
+
+
+</td>  
+  
+ 
+</tr>  
+
+  
+
+
+
+</body>
+
+</html>
